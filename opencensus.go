@@ -105,6 +105,7 @@ type Exporters struct {
 	Stackdriver *StackdriverConfig `json:"stackdriver"`
 	Ocagent     *OcagentConfig     `json:"ocagent"`
 	DataDog     *DataDogConfig     `json:"datadog"`
+	NewRelic    *NewRelicConfig    `json:"newrelic"`
 }
 
 type InfluxDBConfig struct {
@@ -127,6 +128,11 @@ type ZipkinConfig struct {
 
 type JaegerConfig struct {
 	Endpoint    string `json:"endpoint"`
+	ServiceName string `json:"service_name"`
+}
+
+type NewRelicConfig struct {
+	APIKey      string `json:"api_key"`
 	ServiceName string `json:"service_name"`
 }
 
